@@ -8,7 +8,6 @@ export const useAddTodo = ({ clearInputText }) => {
     onSuccess: () => {
       queryClient.invalidateQueries("todos");
       clearInputText();
-      console.log("SUCCESS");
     }
   });
   return { addTodo: mutate, isAddingTodo: isLoading };
