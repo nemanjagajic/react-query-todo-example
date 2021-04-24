@@ -4,12 +4,11 @@ import { useFetchTodos } from "./useFetchTodos";
 
 const Posts = () => {
   const { data, isLoading, isFetching } = useFetchTodos();
-
-  const [inputText, setInputText] = useState("");
-
   const { addTodo, isAddingTodo } = useAddTodo({
     clearInputText: () => setInputText("")
   });
+
+  const [inputText, setInputText] = useState("");
 
   if (isLoading) return <div>Loading...</div>;
 
